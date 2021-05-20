@@ -6,6 +6,10 @@
   background: #47823e;
   color: white;
 }
+.cards-button-wrapper .MuiButtonBase-root:hover{
+  background: #6cb061;
+  color: white;
+}
 .MuiButton-endIcon {
   padding: 0 9px;
 }
