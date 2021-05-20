@@ -5,10 +5,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    textAlign: 'center',
-    paddingTop: 60,
-  }
-}))
+    textAlign: "center",
+    paddingTop: 70,
+    paddingBottom: 100,
+  },
+}));
 
 const Header = () => {
   const classes = useStyles();
@@ -20,10 +21,17 @@ const Header = () => {
             گیلان گردی
           </Typography>
           <Typography className="text" variant="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga enim
-            tempora praesentium quidem! Rerum qui cumque, molestiae quo numquam
-            placeat labore laudantium fugiat impedit sapiente id neque nulla
-            quis ipsa.
+            گردشگری یا توریسم (به انگلیسی: Tourism) سفر به قصد لذت بردن یا
+            کسب‌وکار است؛ همچنین به معنی تئوری و عمل سیاحت‌گری، تجارت، جذب،
+            اسکان و سرگرمی گردشگران، و تجارت مرتبط به برگزاری تور است.[۲] سازمان
+            جهانی گردشگری با توجه به تمامی تعاریف گردشگری که تا قبل از سال ۱۹۹۴
+            ارائه شده بودند در سال ۱۹۹۵ یک تعریف نهایی منتشر کرد: «مجموعه
+            فعالیت‌های فرد یا افرادی که به مکانی غیر از مکان عادی زندگی خود
+            مسافرت و حداقل یک شب و حداکثر یک سال در آنجا اقامت می‌کنند و هدف از
+            مسافرت آنان نیز گذراندن اوقات فراغت است. البته اهدافی نظیر اشتغال و
+            کسب درآمد شامل آن نمی‌شود.» بر این اساس کسانی که شامل این تعریف
+            می‌شوند نیز گردشگر نامیده می‌شوند.[۳] گردشگری می‌تواند داخلی (گردشگر
+            در داخل کشور خود مسافرت می‌کند) یا خارجی باشد.
           </Typography>
         </Grid>
       </Grid>

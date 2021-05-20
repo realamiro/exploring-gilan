@@ -1,0 +1,11 @@
+.cards-button-wrapper .MuiButtonBase-root {
+  width: 100%;
+  font-family: "Vazir", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  background: #47823e;
+  color: white;
+}
+.MuiButton-endIcon {
+  padding: 0 9px;
+}
