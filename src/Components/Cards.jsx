@@ -36,8 +36,8 @@ const Cards = ({ cards }) => {
                     <CardActionArea>
                       <CardMedia
                         className={classes.media}
-                        image={card.img.path}
-                        title={card.img.alt}
+                        image={card.images[0].img.path}
+                        title={card.images[0].img.alt}
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
