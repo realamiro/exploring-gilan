@@ -1,4 +1,11 @@
-import React, { useState } from "react";
+// TODO: router
+// TODO: slider
+// TODO: map
+// TODO: responsive
+// TODO: (maybe) SEO
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import {
   createMuiTheme,
   responsiveFontSizes,
@@ -6,10 +13,9 @@ import {
 } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Navigation from "./Components/Navigation";
-import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Cards from "./Components/Cards";
-import json from './data.json';
+import Location from './Routes/Location';
+import Index from './Routes/Index';
 
 let theme = createMuiTheme({
   typography: {
@@ -19,18 +25,21 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme);
 
 function App() {
-  const [cards, setCards] = useState(json.data);
-  console.log(cards);
+
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <Container maxWidth="lg">
-          <Navigation />
-          <Header />
-          <Cards cards={cards} />
-          <Footer />
-        </Container>
-      </ThemeProvider>
+      <Router>
+      <Switch>
+      </Switch>
+        <ThemeProvider theme={theme}>
+          <Container maxWidth="lg">
+            <Navigation />
+            <Route path="/location/:id" component={Location} />
+            <Route exact path="/" component={Index} />
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      </Router>
     </div>
   );
 }
