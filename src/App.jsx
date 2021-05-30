@@ -1,4 +1,3 @@
-// TODO: router
 // TODO: slider
 // TODO: map
 // TODO: responsive

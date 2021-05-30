@@ -10,6 +10,7 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PublicIcon from "@material-ui/icons/Public";
+import { textSlicer } from '../utils.js';
 import "./Cards.css";
 
 const useStyles = makeStyles({
@@ -48,7 +49,7 @@ const Cards = ({ cards }) => {
                           color="textSecondary"
                           component="p"
                         >
-                          {card.description}
+                          {textSlicer(card.description)}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
