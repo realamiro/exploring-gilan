@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
+import Background from '../Components/Location/Background';
+import Title from '../Components/Location/Title';
 import json from "../data.json";
 
 const Location = () => {
@@ -12,7 +14,10 @@ const Location = () => {
 
   return (
     <div>{theLocation.map((loc) => {
-      return <div key={loc.id}>{loc.title}</div>
+      return <div key={loc.id}>
+      <Background src={loc.images[0].img.path} alt={loc.images[0].img.alt}/>
+      <Title title={loc.title} description={loc.description}/>
+      </div>
     })}</div>
   )
 }

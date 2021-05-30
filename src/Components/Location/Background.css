@@ -1,0 +1,13 @@
+.background-container {
+  position: absolute;
+  z-index: -15;
+  width: 100%;
+  left: 0%;
+}
+
+.background-container img {
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  opacity: .5;
+}
