@@ -1,45 +1,46 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+// TODO: slider
+// TODO: map
+// TODO: responsive
+// TODO: (maybe) SEO
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Navigation from "./Components/Navigation";
+import Footer from "./Components/Footer";
+import Location from './Routes/Location';
+import Index from './Routes/Index';
+
+let theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Vazir", "Roboto", "Arial", "sans-serif"].join(","),
+  },
+});
+theme = responsiveFontSizes(theme);
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <Router>
+      <Switch>
+      </Switch>
+        <ThemeProvider theme={theme}>
+          <Container maxWidth="lg">
+            <Navigation />
+            <Route path="/location/:id" component={Location} />
+            <Route exact path="/" component={Index} />
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
