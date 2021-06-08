@@ -5,12 +5,12 @@ import './Map.css';
 mapboxgl.accessToken =
   "pk.eyJ1IjoiaW1rYXJpbWthcmltIiwiYSI6ImNrcG45czQ3dTA5eXUydW51cnZzdzU0YWUifQ.DZLQeQhqY19sqY6Ii1jgDA";
 
-function Map() {
+function Map({lngg,latt}) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
+  const [lng, setLng] = useState(lngg);
+  const [lat, setLat] = useState(latt);
+  const [zoom, setZoom] = useState(13);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once

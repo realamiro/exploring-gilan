@@ -18,7 +18,7 @@ const Location = () => {
       return <div key={loc.id}>
       <Background src={loc.images[0].img.path} alt={loc.images[0].img.alt}/>
       <Title title={loc.title} description={loc.description}/>
-      <Map />
+      <Map lngg={loc.lng} latt={loc.lat} />
       </div>
     })}</div>
   )
