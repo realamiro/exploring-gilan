@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import HomeIcon from "@material-ui/icons/Home";
+import { Link } from "react-router-dom";
+
+import './Navigation.css';
 
 const Navigation = () => {
   return (
-    <div>
-      Navigation
-    </div>
-  )
-}
+    <nav>
+      <Link to="/">
+        <HomeIcon />
+      </Link>
+    </nav>
+  );
+};
 
 export default Navigation;
