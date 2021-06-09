@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PublicIcon from "@material-ui/icons/Public";
-import { textSlicer } from '../utils.js';
+import { textSlicer } from "../utils.js";
 import "./Cards.css";
 
 const useStyles = makeStyles({
@@ -23,16 +23,15 @@ const useStyles = makeStyles({
 });
 
 const Cards = ({ cards }) => {
-  console.log(cards);
   const classes = useStyles();
   return (
     <div className="cards">
-      <Grid container spacing={3}>
+      <Grid container alignItems="center" justify="center" spacing={3}>
         {cards.length === 0
           ? "there no card"
           : cards.map((card) => {
               return (
-                <Grid item xs={4}>
+                <Grid item>
                   <Card className={classes.root}>
                     <CardActionArea>
                       <CardMedia
