@@ -33,8 +33,8 @@ function App() {
         <ThemeProvider theme={theme}>
           <Container maxWidth="lg">
             <Navigation />
-            <Route path="/location/:id" component={Location} />
-            <Route exact path="/" component={Index} />
+            <Route path="/exploring-gilan/location/:id" component={Location} />
+            <Route exact path="/exploring-gilan/" component={Index} />
             <Footer />
           </Container>
         </ThemeProvider>

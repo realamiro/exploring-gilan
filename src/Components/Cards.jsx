@@ -57,7 +57,7 @@ const Cards = ({ cards }) => {
                       <Grid container>
                         <Grid item xs={12}>
                           <div className="cards-button-wrapper">
-                            <Link to={"/location/" + card.id}>
+                            <Link to={"/exploring-gilan/location/" + card.id}>
                               <Button endIcon={<PublicIcon />} size="big">
                                 بازدید
                               </Button>

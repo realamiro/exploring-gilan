@@ -7,7 +7,7 @@ import './Navigation.css';
 const Navigation = () => {
   return (
     <nav>
-      <Link to="/">
+      <Link to="/exploring-gilan/">
         <HomeIcon />
       </Link>
     </nav>
