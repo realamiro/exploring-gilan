@@ -7,6 +7,7 @@ mapboxgl.accessToken =
 
 function Map({lngg,latt}) {
   const mapContainer = useRef(null);
+  // once
   const map = useRef(null);
   const [lng, setLng] = useState(lngg);
   const [lat, setLat] = useState(latt);
@@ -24,6 +25,7 @@ function Map({lngg,latt}) {
 
   return (
     <div>
+      // show
       <div ref={mapContainer} className="map-container" />
     </div>
   );

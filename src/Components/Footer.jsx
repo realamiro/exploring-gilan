@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer>
-      joder universidad | 2021
+      Amir Hosein Pardak | 2021
     </footer>
   )
 }

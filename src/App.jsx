@@ -2,9 +2,13 @@
 // TODO: map
 // TODO: responsive
 // TODO: (maybe) SEO
+
 import React from "react";
+
+// for single page app
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+// for ui/ux
 import {
   createMuiTheme,
   responsiveFontSizes,
@@ -25,6 +29,7 @@ theme = responsiveFontSizes(theme);
 
 function App() {
 
+// main function
   return (
     <div className="App">
       <Router>
